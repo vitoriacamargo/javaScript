@@ -22,6 +22,7 @@ var convidados = [
   var comprarCerveja = false
    
   for (var i = 0; i <= convidados.length; i++) {
+   console.log(convidado[i].nome, convidado[i].bebeCerveja)
     if (convidados[i].bebeCerveja) {
       comprarCerveja = true
       break
