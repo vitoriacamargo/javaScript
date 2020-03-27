@@ -1,4 +1,5 @@
-var  paciente  =  documento . querySelector ( "# primeiro-paciente" ) ;
+var  titulo = document.querySelector(".titulo");
+
 var pacientes = document.querySelectorAll(".paciente");
 
 for (var i = 0; i < pacientes.length; i++) {
