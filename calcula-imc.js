@@ -6,6 +6,7 @@ var paciente = document.querySelector(".paciente");
 for(var i = 0; i< pacientes.lenght ; i++){
 
 var paciente = paciente[i];
+
 var tdPeso = paciente.querySelector(".info-peso");
 var peso = tdPeso.textContent;
 
@@ -20,6 +21,9 @@ var alturaEhValida = true;
 if (peso < 0 || peso > 1000) {
     console.log("Peso inválido!");
     pesoEhValido = false;
+    tdImc.textContent="Peso inaválido!";
+    paciente.classList.add("paciente-invalido");
+
 }
 
 if (altura <= 0 || altura >= 3.00) {
