@@ -18,6 +18,26 @@ var tdImc = paciente.querySelector(".info-imc");
 var pesoEhValido = true;
 var alturaEhValida = true;
 
+var botaoAdicionar = document.querySelector("#adicionar-paciente");
+botaoAdicionar.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    var form = document.querySelector("#form-adiciona");
+    var paciente = obtemPacienteDoFormulario(form);
+
+    if (!validaPaciente(paciente)) {
+        console.log("Paciente inválido");
+    }
+
+    var pacienteTr = montaTr(paciente);    
+
+    var tabela = document.querySelector("#tabela-pacientes");
+
+    tabela.appendChild(pacienteTr);
+
+    form.reset();
+
+});
 
 if (!pesoEhValido) {
     console.log("Peso inválido!");
