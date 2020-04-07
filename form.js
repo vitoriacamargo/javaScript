@@ -16,16 +16,10 @@ botaoAdicionar.addEventListener("click", function(event) {
     form.reset();
 });
 
-function obtemPacienteDoFormulario(form) {
-
-    var paciente = {
-        nome: form.nome.value,
-        peso: form.peso.value,
-        altura: form.altura.value,
-        gordura: form.gordura.value,
-        imc: calculaImc(form.peso.value, form.altura.value)
+function validaPaciente(paciente){
+    if(paciente.altura < 3.0 && paciente.altura >= 0){
+        return true;
     }
-    return paciente;
 }
  
 function montaTr(paciente){
