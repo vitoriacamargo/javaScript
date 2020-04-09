@@ -6,7 +6,6 @@ var paciente = document.querySelector(".paciente");
 for(var i = 0; i< pacientes.lenght ; i++){
 
 var paciente = paciente[i];
-
 var tdPeso = paciente.querySelector(".info-peso");
 var peso = tdPeso.textContent;
 
@@ -16,6 +15,7 @@ var altura = tdAltura.textContent;
 var tdImc = paciente.querySelector(".info-imc");
 
 var pesoEhValido = true;
+
 var alturaEhValida = true;
 
 var botaoAdicionar = document.querySelector("#adicionar-paciente");
